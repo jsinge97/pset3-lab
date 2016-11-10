@@ -1,36 +1,30 @@
-# pset3
+# PSET 3 Lab: Macros!
 
-FIXME: description
+### Problem 1
+Alter the syntax of your language! Implement `unless`.
 
-## Installation
+Has the same semantics as `if`, but executes the first branch if the predicate
+is false and the second branch if the predicate is true.
 
-Download from http://example.com/FIXME.
+### Problem 2
+Implement the macro `from`. The macro binds a symbol and can perform the
+operations `where`, `orderby`, and `select` over the data it queries.
 
-## Usage
+See the test case under `test/pset3/core_test.clj` for more details.
 
-FIXME: explanation
+### Problem 3
+Write `with-file`. It takes a filename, and binds it to the symbol `file`.
+Within the macro body, `file` refers to the `java.io.File` object.
 
-    $ java -jar pset3-0.1.0-standalone.jar [args]
+See the test case under `test/pset3/core_test.clj` for more details.
 
-## Options
+### Problem 4
+What's wrong with this macro?
 
-FIXME: listing of options this app accepts.
+```clojure
+(defmacro square [n]
+  `(* ~n ~n))
+```
 
-## Examples
+Give us a failing case and write a corrected version of the macro!
 
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
-
-## License
-
-Copyright © 2016 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
