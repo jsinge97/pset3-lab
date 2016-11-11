@@ -48,7 +48,7 @@ The fact below holds true as is:
 ```
 
 However, this next fact doesn't. Identify the bug and fix it. 
-```
+```clojure
  (let [res (java.util.Scanner. (java.io.FileInputStream. "project.clj"))]
    (do (nif 0
             "positive"
@@ -69,7 +69,7 @@ descriptions.  For some helpful resources, see
 
 
 Consider the following list monad:
-```
+```clojure
 (def list-monad
   {:return (fn [v] [v])
    :bind (fn [mv f]
