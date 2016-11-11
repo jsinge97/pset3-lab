@@ -2,19 +2,19 @@
   (:require [clojure.test :refer :all]
             [pset3.core :refer :all]))
 
-(deftest unless
+(deftest unless-test-1
   (testing "unless macro"
     (is (= (unless (> 10 5)
                    "smaller"
                    "greater") "greater"))))
 
-(deftest unless
+(deftest unless-test-2
   (testing "unless macro"
     (is (= (unless (> 10 20)
              "smaller"
              "greater") "smaller"))))
 
-(deftest from
+(deftest from-test
   (testing "from"
     (is (= (from n in names
                  (where (= (count n) 5))
@@ -23,14 +23,14 @@
            '("BURKE" "DAVID" "FRANK")))))
 
 
-(deftest with-file
+(deftest with-file-test
   (testing "with-file"
     (is (= (with-file "project.clj"
              (if (.hasNextLine file)
                (.nextLine file)))
            "(defproject pset3 \"0.1.0-SNAPSHOT\""))))
 
-(deftest nif
+(deftest nif-test-1
   (testing "nif"
     (is (= (nif -1
                 "positive"
@@ -38,7 +38,7 @@
                 "negative"))
         "negative")))
 
-(deftest nif
+(deftest nif-test-2
   (testing "nif"
     (is (let [res (java.util.Scanner. (java.io.FileInputStream. "project.clj"))]
           (do (nif 0

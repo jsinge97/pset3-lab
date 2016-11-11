@@ -1,5 +1,7 @@
 # PSET 3 Lab: Macros!
 
+Due date: November 17.
+
 ### Problem 1: Unless
 Alter the syntax of your language! Implement `unless`.
 
